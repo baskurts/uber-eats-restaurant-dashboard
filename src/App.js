@@ -26,7 +26,16 @@ function App() {
       <Divider />
       <div style={styles.totalSumContainer}>
         <h2>Total: </h2>
-        <h2>$42.96</h2>
+        <h2 style={styles.totalPrice}>$42.96</h2>
+      </div>
+      <Divider />
+      <div style={styles.buttonsContainer}>
+        <Button>
+          Decline Order
+        </Button>
+        <Button>
+          Accept Order
+        </Button>
       </div>
     </Card>
   );
@@ -37,6 +46,13 @@ const styles = {
     flexDirection: 'row',
     display: 'flex',
   },
+  totalPrice: {
+    marginLeft: 'auto',
+    fontWeight: 'bold'
+  },
+  buttonsContainer: {
+
+  }
 };
 
 export default App;
