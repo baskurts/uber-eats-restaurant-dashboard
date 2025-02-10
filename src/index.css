@@ -2,3 +2,11 @@
   background-color: #3cf060 !important;
   border-color: #3cf060 !important;
 }
+
+.ant-pagination-item-active {
+  border-color: #3cf060 !important;
+}
+
+li.ant-pagination-item-active a {
+  color: #3cf060 !important;
+}
