@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Orders = () => {
     const navigate = useNavigate();
+    
     const renderOrderStatus = (orderStatus) => {
       if (orderStatus === 'Accepted') {
         return <Tag color={'green'}>{orderStatus}</Tag>

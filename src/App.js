@@ -1,13 +1,28 @@
-import DetailedOrder from "./modules/DetailedOrder";
-import Orders from "./modules/Orders";
-import { Routes, Route } from 'react-router-dom';
+import { Layout, Image } from "antd";
+import SideMenu from '../src/components/SideMenu';
+import AppRoutes from "./components/AppRoutes";
+
+const { Sider, Content, Footer} = Layout; 
 
 function App() {
   return (
-    <Routes>
-      <Route path="" element={<Orders />}/>
-      <Route path="order/:id" element={<DetailedOrder />}/>
-    </Routes>
+    <Layout>
+      <Sider style={{ height: "100vh", backgroundColor: 'white'}}>
+        <Image 
+          src="https://logos-world.net/wp-content/uploads/2020/11/Uber-Eats-Symbol.jpg" 
+          preview={false}
+        />
+        <SideMenu />
+      </Sider>
+      <Layout>
+        <Content>
+          <AppRoutes />
+        </Content>
+        <Footer style={{ textAlign: 'center'}}>
+          Uber Eats Restaurant Dashboard ©2025
+        </Footer>
+      </Layout>
+    </Layout>
   );
 }
 
